@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="mysuite">
-    <listeners>
-        <listener class-name="org.testng.reporters.FailedReporter"/>
-        <listener class-name="Utilities.ExtentReportManager"/>
-    </listeners>
 
+     <listeners>
+         <listener class-name="org.testng.reporters.FailedReporter"/>
+     </listeners>
     <test name="mytest">
+        <groups>
+            <run>
+                <include name="regression"/>
+<!--                <exclude name="sanity"/>-->
+            </run>
+        </groups>
         <parameter name="browser" value="edge"/>
         <classes>
             <class name="testCases.TC01_RegisterUser"/>

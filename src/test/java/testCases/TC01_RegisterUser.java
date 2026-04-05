@@ -7,7 +7,7 @@ import pageObjects.*;
 
 public class TC01_RegisterUser extends BaseClass{
 
-    @Test(priority = 1)
+    @Test(priority = 1,groups = {"regression"})
     void testRegister(){
         HomePage hp=new HomePage(driver);
         hp.clickLogin();
@@ -29,10 +29,13 @@ public class TC01_RegisterUser extends BaseClass{
                 System.out.println("not on create account page!");
                 Assert.assertTrue(false);
             }
+        }else{
+            System.out.println("on register page!");
+            Assert.fail();
         }
 
     }
-    @Test(priority = 2,dependsOnMethods={"testRegister"})
+    @Test(priority = 2,dependsOnMethods={"testRegister"},groups = {"regression"})
     void testRegisterDetails() {
         CreateAccountPage ca = new CreateAccountPage(driver);
             ca.btn_radio();
@@ -71,7 +74,7 @@ public class TC01_RegisterUser extends BaseClass{
         }
     }
 
-    @Test(priority = 4,dependsOnMethods={"testAccCreated"})
+    @Test(priority = 4,dependsOnMethods = {"testAccCreated"})
     void testDeleteAcc(){
         HomePage hp=new HomePage(driver);
         if(hp.getName()==true) {
@@ -84,7 +87,7 @@ public class TC01_RegisterUser extends BaseClass{
                 Assert.assertTrue(true);
             } else {
                 System.out.println("account deletion failed!");
-                Assert.assertTrue(false);
+                Assert.fail();
             }
         }
     }
