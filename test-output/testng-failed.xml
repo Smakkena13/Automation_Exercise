@@ -8,16 +8,13 @@
   <test thread-count="5" name="mytest(failed)">
     <parameter name="browser" value="edge"/>
     <classes>
-      <class name="testCases.TC01_RegisterUser">
+      <class name="testCases.TC02_ValidLogin">
         <methods>
           <include name="setUp"/>
-          <include name="testDeleteAcc"/>
-          <include name="testAccCreated"/>
-          <include name="testRegisterDetails"/>
           <include name="tearDown"/>
-          <include name="testRegister"/>
+          <include name="testValidLogin"/>
         </methods>
-      </class> <!-- testCases.TC01_RegisterUser -->
+      </class> <!-- testCases.TC02_ValidLogin -->
     </classes>
   </test> <!-- mytest(failed) -->
 </suite> <!-- Failed suite [mysuite] -->

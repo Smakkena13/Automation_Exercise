@@ -14,6 +14,10 @@ public class RegisterPage extends BasePage{
     //locators
     @FindBy(xpath="//div[@class='signup-form']//h2")
     WebElement txt_msg;
+    @FindBy(xpath="//div[@class='login-form']//h2")
+    WebElement txt_msg1;
+    @FindBy(xpath = "(//input[@name='email'])[1]")
+    WebElement txt_loginemail;
 
     @FindBy(xpath = "//input[@placeholder='Name']")
     WebElement txt_name;
@@ -25,10 +29,23 @@ public class RegisterPage extends BasePage{
     WebElement btn_signup;
     @FindBy(xpath = "//b[contains(text(),'Acc')]")
     WebElement txt_acc_heading;
+    @FindBy(xpath = "//input[@placeholder='Password']")
+    WebElement txt_password;
+    @FindBy(xpath = "//button[@data-qa='login-button']")
+    WebElement btn_login;
 
     //actions
     public String get_txt_msg(){
        return txt_msg.getText();
+    }
+    public String get_txt_msg1(){
+        return txt_msg1.getText();
+    }
+    public void set_txt_loginemail(String e){
+        txt_loginemail.sendKeys(e);
+    }
+    public void set_txt_password(String p){
+        txt_password.sendKeys(p);
     }
 
     public void set_txt_name(String n){
@@ -38,7 +55,9 @@ public class RegisterPage extends BasePage{
     public void set_txt_email(String e){
         txt_email.sendKeys(e);
     }
-
+    public void clk_login(){
+        btn_login.click();
+    }
     public void clk_signup(){
         btn_signup.click();
     }

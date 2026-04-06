@@ -9,7 +9,7 @@
     <test name="mytest">
         <parameter name="browser" value="edge"/>
         <classes>
-            <class name="testCases.TC01_RegisterUser"/>
+            <class name="testCases.TC02_ValidLogin"/>
         </classes>
     </test>
 </suite>

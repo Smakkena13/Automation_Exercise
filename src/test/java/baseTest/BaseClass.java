@@ -30,7 +30,7 @@ import java.util.Properties;
 public class BaseClass {
     public static WebDriver driver;
     public EdgeOptions eo;
-    private static final Logger log;
+    public static final Logger log;
     Properties p;
 
     static {
