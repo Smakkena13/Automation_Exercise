@@ -84,7 +84,7 @@ public class BaseClass {
         p.load(f);
 
         driver.get(p.getProperty("url"));
-        driver.manage().timeouts().implicitlyWait(Duration.ofDays(5));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.manage().window().maximize();
         log.info("Browser launched and maximized successfully");
     }

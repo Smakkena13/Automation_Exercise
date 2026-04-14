@@ -9,7 +9,9 @@
     <test name="mytest">
         <parameter name="browser" value="edge"/>
         <classes>
-            <class name="testCases.TC02_ValidLogin"/>
+<!--            <class name="testCases.TC02_ValidLogin"/>-->
+<!--            <class name="testCases.TC03_InvalidLogin"/>-->
+            <class name="testCases.TC04_LogoutUser"/>
         </classes>
     </test>
 </suite>

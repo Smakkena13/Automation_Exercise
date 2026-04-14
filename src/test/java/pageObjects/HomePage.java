@@ -14,14 +14,19 @@ public class HomePage extends BasePage{
     //locators
     @FindBy(xpath="//ul[@class='nav navbar-nav']//li[4]//a")
     WebElement lnk_login;
-    @FindBy(xpath="//ul[@class='nav navbar-nav']//li[10]//b")
-    WebElement txt_name;
+    @FindBy(xpath="//ul[@class='nav navbar-nav']//li[4]//a")
+    WebElement lnk_logout;
     @FindBy(xpath="//ul[@class='nav navbar-nav']//li[5]//a")
     WebElement txt_delete_acc;
+    @FindBy(xpath="//ul[@class='nav navbar-nav']//li[10]//b")
+    WebElement txt_name;
 
     //acions
     public void clickLogin(){
         lnk_login.click();
+    }
+    public void clickLogout(){
+        lnk_logout.click();
     }
     public boolean getName(){
         return txt_name.isDisplayed();

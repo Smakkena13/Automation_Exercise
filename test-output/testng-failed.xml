@@ -8,13 +8,13 @@
   <test thread-count="5" name="mytest(failed)">
     <parameter name="browser" value="edge"/>
     <classes>
-      <class name="testCases.TC02_ValidLogin">
+      <class name="testCases.TC04_LogoutUser">
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="testValidLogin"/>
+          <include name="testLogout"/>
         </methods>
-      </class> <!-- testCases.TC02_ValidLogin -->
+      </class> <!-- testCases.TC04_LogoutUser -->
     </classes>
   </test> <!-- mytest(failed) -->
 </suite> <!-- Failed suite [mysuite] -->

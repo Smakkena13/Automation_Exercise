@@ -33,8 +33,13 @@ public class RegisterPage extends BasePage{
     WebElement txt_password;
     @FindBy(xpath = "//button[@data-qa='login-button']")
     WebElement btn_login;
+    @FindBy(xpath = "//p[contains(text(),'incorrect!')]")
+    WebElement txt_incorrect_msg;
 
     //actions
+    public String getIncorrectmsg(){
+        return txt_incorrect_msg.getText();
+    }
     public String get_txt_msg(){
        return txt_msg.getText();
     }
